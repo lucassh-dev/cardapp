@@ -21,6 +21,7 @@ import '../../assets/stylesheets/application.scss';
 import 'jquery';
 import 'bootstrap';
 import './adminlte-app';
+import './bootstrap-template';
 
 
 
