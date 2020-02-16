@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pizzas
   get 'dashboard/index'
   get 'home/index'
 

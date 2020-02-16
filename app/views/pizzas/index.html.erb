@@ -1,0 +1,83 @@
+<div class="header-category">
+  <%= image_tag  "bg-pizza.jpg", class: "img-category" %>
+</div>
+
+<section class="content" style="padding:0px;">
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <div class="box box-warning">
+
+        <div class="box-body" style="padding: 10px 20px;">
+          
+          <p id="notice"><%= notice %></p>
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <% @pizzas.each do |pizza| %>
+              
+                <figure>
+
+                  <%= image_tag  "pizza1.png" %>
+                  <div>
+                    <h1 class="figName"><%= pizza.name %></h1>
+                    <p><%= pizza.description %></p>
+                    <h2><%= pizza.price %></h2>
+                  </div>
+                  <ul class="figOption">
+                    <li><%= link_to 'Show', pizza %></li>
+                    <li><%= link_to 'Edit', edit_pizza_path(pizza) %></li>
+                    <li><%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                  </ul>
+                  
+                </figure>
+
+              <% end %>
+
+            </div>
+          </div>
+
+          <%
+=begin%>
+ <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @pizzas.each do |pizza| %>
+                <tr>
+                  <td><%= pizza.name %></td>
+                  <td><%= pizza.description %></td>
+                  <td><%= pizza.price %></td>
+                  <td><%= link_to 'Show', pizza %></td>
+                  <td><%= link_to 'Edit', edit_pizza_path(pizza) %></td>
+                  <td><%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <br> 
+<%
+=end%>
+
+          <%= link_to ' + ', new_pizza_path, class: "add-button" %>
+
+        </div>
+
+      </div>
+
+    </div>
+  
+  </div>
+
+</div>
