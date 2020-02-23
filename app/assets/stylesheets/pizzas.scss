@@ -2,14 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-figure {
+figure.item-menu {
     border: solid 2px black;
-    margin: 10px 15px;
+    margin: 25px 15px;
     text-align: center;
     padding: 5px 10px;
+    border-radius: 5px;
 }
 
-figure img {
+figure.item-menu img {
     max-width: 50%;
     max-height: 50%;
 }
